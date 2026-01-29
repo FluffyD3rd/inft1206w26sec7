@@ -2,27 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!--Name: Nathaniel Shearing
+   
+    <title>Birdwatching</title>
+       <link  rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700"
+     />
+     <link rel="stylesheet" href="style (2).css"/> 
+  <!--Name: Nathaniel Shearing
 	File: letter.html
 	Date: 26 Jan 2026
 	Description: 
     This file is part 1 of the assignment.
     In this file a pre composed letter is taken and using html it is 
     marked up to meet certain visual and structural requiments.-->
-    <title>Birdwatching</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700"
-      rel="stylesheet" />
-      <link rel="style" href="./assignment1/part2/style (2).css">
+      </head>
+     
     
-  </head>
+    
+  
 
   <body>
-    <h1>Birdwatching</h1>
+    <header>
+    <h1>Birdwatching
+      <img src= imgs/dove.png alt = "the dove logo">
+    </h1>
 
-    Home Get started Photos Gear Forum
-
-    <h2>Welcome</h2>
+<nav><ul><li><a href="#">Home</a></li>
+<li><a href="#">Get Started</a></li>
+<li><a href="#">Photos</a></li>
+<li><a href="#">Gear</a></li>
+<li><a href="#">Forum</a></li></ul></nav>
+    </header>
+<main>
+  <article>
+        <h2>Welcome</h2>
 
     <p>
       Welcome to our fake birdwatching site. If this were a real site, it
@@ -36,11 +49,17 @@
       So don't waste time! Get what you need, then turn off that computer and
       get out into the great outdoors!
     </p>
-
+    </article>
+</main>
+    <aside>
     <h2>Favorite photos</h2>
 
-    <!-- Link images here. -->
-
+    <a href= "/assignment1/part2/imgs/favorite-bird-1.jpg"><img src = "/assignment1/part2/imgs/favorite-bird-1_th.jpg" alt = "best bird"/></a>
+      <a href = "imgs/favorite-bird-2_th.jpg" alt="Great bird"></a>
+        <a href = "imgs/favorite-bird-3_th.jpg" alt = "Good bird"></a>
+          <a href = "imgs/favorite-bird-4_th.jpg" alt = "average bird"></a>
+    </aside>
+<footer>
     <p>
       This fake website example is CC0 — any part of this code may be reused
       in any way you wish. Original example written by Chris Mills, 2016.
@@ -50,5 +69,6 @@
       <a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a>
       by Lorc.
     </p>
+    </footer>
   </body>
 </html>
