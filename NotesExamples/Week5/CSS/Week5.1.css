@@ -1,0 +1,23 @@
+/*
+CSS- Cascading style sheet is used to format the elements in html
+Week5 slides cover all CSS material 
+
+keep CSS as an external file and then link it in the html documents
+advantage to keeping it external is you can apply it too all pages of the website meaning you only need to make changes in one central location
+CSS Syntax/Structure
+
+h1 is the selector(the name of the tag) {declaration contains property and value in this case(color is the property and blue is the value}together they are a declaration, the font sections follows the same rules}
+
+h1{color:blue; 
+    font-size:12px;}
+
+    CSS can be added
+Inline would be the CSS rules in the tag section
+internal would be embedded
+External which would be a seperate file
+Slide for this week has an example of the priorities for different types of documents 
+*/
+h1{
+    color: aqua;
+
+}
