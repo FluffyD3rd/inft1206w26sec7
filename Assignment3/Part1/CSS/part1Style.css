@@ -1,22 +1,58 @@
+    /*
+    Name: Nathaniel Shearing
+    FileName: Part1Style.css
+    Date: Feb 27 2026
+    Description:
+    This is the css file 
+    that has been linked to style the biography page.
+    */
+
 html {
   background-color: white;
 }
 
 body {
-  font: 1.2em / 1.5 system-ui;
+  font: 1.2rem / 1.5 system-ui;
 }
 
 /* add box styles*/
 body{
-    padding: 28px;
+    padding: 20px;
     width: 500px;
+    
 /* add backgroound color**/
 background-color: #efefef;
-margin:0,auto;
+margin-top: 0;
+margin-bottom: 0;
+margin-left: auto;
+margin-right: auto;
 }
+
 ul{
-    background-color: white;
-    border: 5px,solid,purple;
+    background-color: #eeeeee;
+    border: 5px solid purple;
     padding: 30PX;
     border-radius: 20PX;
+}
+ul a{
+  color: forestgreen;
+}
+ul a:hover{
+  color: darkgreen;
+  text-decoration: none;
+}
+
+h1{
+  color: hotpink;
+  border-bottom: 10px dotted purple;
+  font-size: 2rem;
+}
+div{
+  color: darkslategray;
+  font-weight: bold;
+}
+
+h2{
+  font-style: italic;
+  font-size: 1.5rem;
 }
