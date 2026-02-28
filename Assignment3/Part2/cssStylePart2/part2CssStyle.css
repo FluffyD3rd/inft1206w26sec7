@@ -6,8 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
 html{
-      font-family: "Noto Serif", sans-serif ;
+      font-family: "Noto Serif", serif ;
   font-size: 1rem;
+
 }
 
 * {
@@ -20,7 +21,7 @@ body {
   min-width: 980px;
   max-width: 1400px;
   letter-spacing: .025em;
-  line-height: 20px;
+  line-height: 1.6em;
 }
 
 /* Layout */
@@ -36,7 +37,6 @@ main {
 
 header {
   border-bottom: 5px solid #aa6666;
- 
 }
 
 footer {
@@ -48,15 +48,16 @@ footer p {
 }
 
 h1,h2 { 
-  font-family: "Roboto Slab", sans-serif;
-  font-weight: bold ;
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
   font-style: normal;
-  letter-spacing: .05em;
+  letter-spacing: .075em;
 }
 h1{
     font-size: 2rem;
-    font-weight: bold;
      text-align:center;
+     margin-top: .5rem;
+     margin-bottom: .75rem;
 }
 h2{
     margin-bottom: 0;
@@ -67,15 +68,61 @@ section h2 + p{
 }
 a{
     color: #aa6666;
+    outline: none;
 }
+
+a:visited{
+    color:hotpink;
+}
+
 a:focus{
     text-decoration: none;
-    color: darkred;
+    color: purple;
 }
+
 a:hover{
     color: crimson;
     text-decoration: none;
 }
-A:visited{
-    color:deeppink;
+
+a[href*="http"]{
+    background: url("/Part2/imagesPart2/external-link-52.png");
+    padding-right: 1em;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: right;
+    }
+
+nav li{
+    display: block;
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+    outline: solid #aa6666;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bolder;
 }
+nav li a{
+    color: #aa6666;
+}
+nav li a:visited{
+    color: hotpink;
+}
+nav li a:focus{
+    color: purple;
+}
+nav li a:hover{
+    text-decoration: none;
+    color: crimson;
+}
+ul li{
+    list-style: circle;
+    margin: .2rem;
+}
+ol li{
+    list-style: lower-greek;
+    margin: .2rem;
+}
+
+
