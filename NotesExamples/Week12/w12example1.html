@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validate(){
+            let fname = document.querySelector('#fname').value.trim();
+            // first name is required
+            if (fname == ""){
+                document.querySelector('#fname-error').textContent = "You must provide a value for first name!"
+                document.querySelector('#fname-error').style.color = "red";
+                return false;
+            }
+            else if (fname.length<5){
+                document.querySelector('#fname-error').textContent = "You must enter at least 5 characters!"
+                document.querySelector('#fname-error').style.color = "red";
+                return false;
+            }
+            else{
+                fname= fname.toLowerCase();
+                for(let i=0;i<fname.length;i++){
+                    if(fname[i]<'a'|| fname[i]>'z'){
+                    document.querySelector('#fname-error').textContent = "You must only enter alphabetic characters!"
+                    document.querySelector('#fname-error').style.color = "red";
+                    return false;
+                }
+            }
+        }
+            return true;
+        }
+    </script>
+    <title>Week12</title>
+</head>
+<body>
+    <h1>Week12:Form Validation</h1>
+    <!--
+    action is where we are sending the information
+    Form is just a container
+     -->
+    <form action="https://httpbin.org/get" method="get" onsubmit="return validate();">
+        <div>
+            <label for="fname">First Name: </label>
+            <input type="text" name="fname" id="fname" required>
+            <span id="fname-error"></span>
+        </div>
+        <div>
+            <label for="lname">Last Name: </label>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age" min="18" max="99">
+        </div>
+        <div>
+            
+            <input type= "submit">
+            <input type="reset">
+            
+        </div>
+    </form>
+    
+</body>
+</html>

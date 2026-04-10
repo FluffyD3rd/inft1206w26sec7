@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+
+    <h1>Week 10 DOM Examples</h1>
+
+    <!--Good event handler and listener example-->
+    <p id = id1>My name is Nathan</p>
+
+    <!-- Bad event handler and listener example -->
+     <h2 onmouseover="this.style.color = 'red'" onmouseout="this.style.color = 'black'"> This is a bad event handler layout, we are mixing JavaScript and html, javascript styling should
+        always be in a seperate file(CSS style file) </h2>
+         <script src="/NotesExamples/notesFromClassOnJavaScript/objectProgramLessons/objectStyleJavaScript.js"></script>
+</body>
+</html>
+
+<!-- 
+JavaScript Objects and Arrays 
+JavaScript objects are associative arrays(or map,or dictionary - a data structure composed of a collection of key/value pairs) 
+
+Objects can be created using literal notation or function constructor
+
+example: 
+let phones = {'Sam:905-416-1234'} 
+
+Sam is the key and the phone number is the value 
+the information is called by using dot or box notaion and declaring the key (phones['Sam'] or phones.Sam)
+
+Slide 4 for week 11 has an example of how to create an object (literal notation)
+
+In java script 'this' is a key word that donates the object, if you use this inside a function it will set the value for that parameter
+
+In this case if the sections are empty as you create the object the values will be passed to the object(example below)
+person4.name = "james";
+person4.age = 30;
+
+you can also create object using -function constructor- 
+
+function Person(name, age){
+this.name = name;
+this.age = age;
+this.show = function(){console.log(this.name + this.age)};
+}
+--
+to create a class in javascript 
+
+class Person{
+name;
+
+-- the word constructor must be used--
+
+this.name = name;
+constructor(name){    
+}
+}
+
+DOM stands for Document Object Model
+
+In general everything that happens in a browser may be called an event
+every element on a web page has a certain even which van trigger a JavaScript function 
+Event Handlers are used to manipulate documents
+the event handler has the prefix --on-- followed by the event name
+
+ -->

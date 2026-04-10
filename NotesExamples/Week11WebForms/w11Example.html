@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form div()
+    </style>
+    <title>Week11Example</title>
+</head>
+<body>
+    <h1>Week 11 Introduction to Form</h1>
+    <!--action is were we will submit the data
+    the hash(#) lets it know we are storing the data locally
+    for method if you dont supply a attridute it will default to get
+    get means the data will be appended to the url
+    name can be different from the id
+    change get to post so it sends to server instead of appending to url
+    if you are submiting sensitive data or large amounts of data use post
+    -->
+<!--<form action="#" method="get" >-->
+    <form action = "https://httpbin.org/" method="get">
+
+    <div>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" title="Enter First Name" placeholder="First Name">
+    </div>
+
+    <div>
+        <label for="fname2">Last Name</label>
+        <input type="text" id="fname2" name="fname2" title="Enter Last Name" placeholder="Last Name">
+    </div>
+
+    <div>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass">
+    </div>
+
+    <div>
+        <label for="file">Upload your Assignment</label>
+        <input type="file" id="file" name="file">
+    </div>
+
+    <div>
+        <label for="interest">What are your interests and hobbies?</label>
+        <div>
+        <input type="checkbox" name="interest" id="interest1" value="Sports" checked>
+        <label for="interest1">Sports</label>
+        <input type="checkbox" id="interest2" name="interest" value="music">
+        <label for="interest2">Music</label>
+        </div>
+    </div>
+
+    <div>
+        <label for=""> Which OS do you prefer?</label>
+        <div>
+        <input type="radio" name="OS" value="windows">
+        <label for="">Windows</label>
+        <input type="radio" name="OS" value="0S2">
+        <label for="">OS2</label>
+        </div>
+    </div>
+
+    <div>
+        <label for="">What do you want to do this weekend?</label>
+        <div>
+            <select name="weekend" id="weekend">
+            <option> </option>
+            <option value="book">Read a Book</option>
+            <option value="sleep">Sleep</option>
+            <option>Gaming</option>
+        </select>
+        </div>
+    </div>
+    
+    <div>
+        <label for="">How is the web development going?</label>
+        <textarea name="" id="" rows="5" cols="20"></textarea>
+    </div>
+
+    <div> 
+        <input type="submit">
+    </div>
+
+</form>    
+</body>
+</html>
