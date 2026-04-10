@@ -25,6 +25,16 @@ const images = [
 
 const baseURL = "https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
 
-for (const photo of images){
-    console.log(value);
+for (const image of images){
+    const newImageElement = document.createElement("img");
+    newImageElement.src = (baseURL + image.filename);
+    newImageElement.alt = (image.alt);
+    newImageElement.tabIndex = "0";
+    thumbBar.appendChild(newImageElement);
+    newImageElement.addEventListener('click',updateDisplayedImage());
+    newImageElement.addEventListener("keydown",(enter)=>{
+        if (enter.code === "Enter"){
+            updateDisplayedImage(enter);
+        }
+    });
 }
