@@ -1,8 +1,8 @@
 /*
 Name: Nathaniel Shearing
-	File: sillyStoryScript
-	Date: 09 April 2026
-	Javascript file that is linked with the sillyStory page. This java script
+  File: sillyStoryScript
+  Date: 09 April 2026
+  Javascript file that is linked with the sillyStory page. This java script
   creates a random story with an inputted name. It can also adjustes the units
   and numbers in the story depending on the location selected. 
 
@@ -21,9 +21,9 @@ function randomValueFromArray(array) {
 
 // Text strings
 const characters = [
-"Willy the Goblin",
-"Big Daddy", 
-"Father Christmas"
+  "Willy the Goblin",
+  "Big Daddy",
+  "Father Christmas"
 ];
 
 const places = [
@@ -32,12 +32,12 @@ const places = [
   "the White House"
 ];
 
-  const events = [
-    "spontaneously combusted",
-    "melted into a puddle on the sidewalk",
-    "turned into a slug and slithered away"
-  ];
-  
+const events = [
+  "spontaneously combusted",
+  "melted into a puddle on the sidewalk",
+  "turned into a slug and slithered away"
+];
+
 // return random string function
 
 function returnRandomStoryString() {
@@ -57,18 +57,18 @@ generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
   newStory = returnRandomStoryString();
-  
+
 
   if (customName.value !== "") {
     const name = customName.value;
-    newStory = newStory.replace("Bob",name)
+    newStory = newStory.replace("Bob", name)
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = Math.round(300/14) + " stone";
-    const temperature = Math.round((94-32)*(5/9)) + " Celsius";
-     newStory = newStory.replace("300 pounds",(weight))
-    newStory = newStory.replace("94 Fahrenheit",(temperature))
+    const weight = Math.round(300 / 14) + " stone";
+    const temperature = Math.round((94 - 32) * (5 / 9)) + " Celsius";
+    newStory = newStory.replace("300 pounds", (weight))
+    newStory = newStory.replace("94 Fahrenheit", (temperature))
   }
 
   story.textContent = newStory;
