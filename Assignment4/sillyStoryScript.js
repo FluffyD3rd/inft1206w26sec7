@@ -1,4 +1,12 @@
+/*
+Name: Nathaniel Shearing
+	File: sillyStoryScript
+	Date: 09 April 2026
+	Javascript file that is linked with the sillyStory page. This java script
+  creates a random story with an inputted name. It can also adjustes the units
+  and numbers in the story depending on the location selected. 
 
+*/
 
 // Complete variable definitions and random functions
 
@@ -12,23 +20,31 @@ function randomValueFromArray(array) {
 }
 
 // Raw text strings
+const characters = [
+"Willy the Goblin",
+"Big Daddy", 
+"Father Christmas"
+];
 
-// Willy the Goblin
-// Big Daddy
-// Father Christmas
+const places = [
+  "the soup kitchen",
+  "Disneyland",
+  "the White House"
+];
 
-// the soup kitchen
-// Disneyland
-// the White House
-
-// spontaneously combusted
-// melted into a puddle on the sidewalk
-// turned into a slug and slithered away
-
+  const events = [
+    "spontaneously combusted",
+    "melted into a puddle on the sidewalk",
+    "turned into a slug and slithered away"
+  ];
+  
 // Partial return random string function
 
 function returnRandomStoryString() {
-  // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
+  const randomCharacter = randomValueFromArray(characters);
+  const randomPlace = randomValueFromArray(places);
+  const randomEvent = randomValueFromArray(events);
+  storyText = "It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
 
   return storyText;
 }
