@@ -13,7 +13,7 @@ const thumbBar = document.querySelector(".thumb-bar");
 
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
-
+const btnClass = btn.classList;
 const images = [
     { filename: "pic1.jpg", alt: "Closeup of a human eye." },
     { filename: "pic2.jpg", alt: "Rock that looks like a wave" },
@@ -32,7 +32,7 @@ for (const image of images) {
 
     newImageElement.alt = image.alt;
 
-    newImageElement.tabIndex = "0";
+    newImageElement.tabIndex = "13";
 
     thumbBar.appendChild(newImageElement);
 
@@ -49,4 +49,16 @@ function changeDisplayedImage(enter){
     displayedImage.alt = enter.target.alt;
 }
 
-
+btn.addEventListener("click",() =>{
+    if (btnClass == ("dark")) {
+        btn.textContent = "Lighten";
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+        btnClass.remove("dark");
+    }
+    else{
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0.0)";
+        btn.className = "dark";
+    }
+    }
+);
