@@ -9,6 +9,7 @@ Name: Nathaniel Shearing
 */
 
 const paragraph = document.querySelector("p");
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -33,18 +34,20 @@ class Shape{
 }
 
 class Ball extends Shape{
-  constructor(x, y, velX, velY, color, size, exists) {
+  constructor(x, y, velX, velY, color, size) {
     super(x,y,velX,velY);
     this.color = color;
     this.size = size;
-    this.exists = exists;
+    this.exists = true;
   }
+
     draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
+
   update() {
     if (this.x + this.size >= width) {
       this.velX = -this.velX;
@@ -65,6 +68,7 @@ class Ball extends Shape{
     this.x += this.velX;
     this.y += this.velY;
   }
+
     collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball) && ball.exists) {
@@ -79,6 +83,7 @@ class Ball extends Shape{
     }
   }
 }
+
 class evilCircle extends Shape{
     constructor(x,y){
         super(x,y,20,20);
@@ -101,7 +106,7 @@ class evilCircle extends Shape{
   }
 });
     }
-        draw() {
+    draw() {
     ctx.beginPath();
     ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
@@ -134,6 +139,9 @@ checkBounds(){
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          ballCount--;
+          paragraph.textContent = "Ball Count: " + ballCount;
+          
         }
       }
     }
@@ -155,9 +163,10 @@ while (balls.length < 25) {
     randomRGB(),
     size,
   );
-
   balls.push(ball);
 }
+ let ballCount = balls.length;
+ paragraph.textContent = "Ball Count: " + ballCount;
 const evilCircle1 = new evilCircle(15,15);
 
 function loop() {
@@ -165,7 +174,7 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    if (exists = true){
+    if (ball.exists){
     ball.draw();
     ball.update();
     ball.collisionDetect();
@@ -174,6 +183,7 @@ function loop() {
     evilCircle1.draw();
     evilCircle1.checkBounds();
     evilCircle1.collisionDetect();
+
   requestAnimationFrame(loop);
 }
 
