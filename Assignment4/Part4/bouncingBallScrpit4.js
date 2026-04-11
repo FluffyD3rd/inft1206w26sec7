@@ -8,6 +8,7 @@ Name: Nathaniel Shearing
 
 */
 
+const paragraph = document.querySelector("p");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -36,7 +37,7 @@ class Ball extends Shape{
     super(x,y,velX,velY);
     this.color = color;
     this.size = size;
-    this.exists = true;
+    this.exists = exists;
   }
     draw() {
     ctx.beginPath();
@@ -102,26 +103,26 @@ class evilCircle extends Shape{
     }
         draw() {
     ctx.beginPath();
-    ctx.linewidth = 3;
+    ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
 }
 checkBounds(){
     if (this.x + this.size >= width) {
-      this.x = -this.size;
+      this.x -= this.size;
     }
 
     if (this.x - this.size <= 0) {
-      this.x = -this.size;
+      this.x += this.size;
     }
 
     if (this.y + this.size >= height) {
-      this.y = -this.size;
+      this.y -= this.size;
     }
 
     if (this.y - this.size <= 0) {
-      this.y = -this.size;
+      this.y += this.size;
     }
   }
   collisionDetect() {
@@ -157,24 +158,22 @@ while (balls.length < 25) {
 
   balls.push(ball);
 }
+const evilCircle1 = new evilCircle(15,15);
+
 function loop() {
-    const evilCircle1 = new evilCircle(15,15);
-
-
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    if (ball.exists){
+    if (exists = true){
     ball.draw();
     ball.update();
     ball.collisionDetect();
-  }
+  }    
+}
     evilCircle1.draw();
     evilCircle1.checkBounds();
     evilCircle1.collisionDetect();
-}
-
   requestAnimationFrame(loop);
 }
 
