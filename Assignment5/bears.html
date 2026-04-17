@@ -4,12 +4,14 @@
 	Date: 17 April 2026
     Description: This file contains the html code for the bears website. It is linked to the bearsStyle.css file for styling. 
     background color showed 7.5 on my contrast checker(used seige media wcag) with black font color -->
-   <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <title>Accessibility assessment</title>
+    <!-- due to styling the below link throws an html validation error as it cannot recgonize the vertical line, but with out the link the styling is incorrect-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="bearsStyle.css">
 
@@ -35,8 +37,9 @@
       
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query">
-        <input type="submit" value="Go!">
+        <label for="Search-query" class="visually-hidden">Search query box</label>
+        <input type="search" name="q" id="Search-query" placeholder="Search query" aria-label="Search query">
+        <input type="submit" value="Go!" aria-label="Submit Search">
       </form>
       </nav>
 
@@ -57,7 +60,7 @@
         <p>Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.</p>
         
         <table>
-
+            <caption> Table containing information on both wild and urban bears. </caption>
           <thead>
             <tr>
               <th scope="col">Bear Type</th>
@@ -87,6 +90,7 @@
               <td >Starbucks, sushi</td>
             </tr>
           </tbody>
+          
         </table>
 
         <h3>Habitats and Eating habits</h3>
@@ -108,16 +112,14 @@
         <p>The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.</p>
         
         <audio controls>
-          <source src="media/bear.mp3" type="audio/mp3">
+          <source src="media/bear.mp3" type="audio/mp3" >
           <source src="media/bear.ogg" type="audio/ogg">
           <p> 
             It looks like your browser doesn't support HTML5 audio players. 
           <a href = "media/bear.mp3"> Click here to download the audio file. </a>
           </p>
-          <section>
             <p> This is a transcript of the audio recording:</p>
             <p> This isn't really an audio fact file about bears, but it is an audio file you can transcribe.</p>
-          </section>
         </audio>
 
         
@@ -141,11 +143,11 @@
             <form class="comment-form">
               <div class="flex-pair">
                <label for="name"> Your name:</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Enter your name">
               </div>
               <div class="flex-pair">
                 <label for="comment">Your comment:</label>
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+                <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label="Enter your comment">
               </div>
               <div>
                 <input type="submit" value="Submit comment">
@@ -187,7 +189,7 @@
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="bearsScript.js"></script>
 
   </body>
 </html>
