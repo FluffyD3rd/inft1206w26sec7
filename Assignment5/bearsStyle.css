@@ -57,9 +57,9 @@ p, li, table {
 }
 
 /* || header layout */
-
+/* background color showed 7.5 on my contrast checker(used seige media wcag)*/
 nav, article, footer, .secondary {
-  background-color: yellowgreen;
+  background-color: rgb(135, 250, 97)
 }
 
 article, footer, .secondary {
