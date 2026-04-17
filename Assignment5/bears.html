@@ -3,7 +3,7 @@
 	File: bears.html
 	Date: 17 April 2026
     Description: This file contains the html code for the bears website. It is linked to the bearsStyle.css file for styling. 
- -->
+    background color showed 7.5 on my contrast checker(used seige media wcag) with black font color -->
    <!DOCTYPE html>
 <html>
   <head>
@@ -57,32 +57,34 @@
         <p>Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.</p>
         
         <table>
+
           <thead>
             <tr>
-              <td>Bear Type</td>
-              <td>Coat</td>
-              <td>Adult size</td>
-              <td>Habitat</td>
-              <td>Lifespan</td>
-              <td>Diet</td>
+              <th scope="col">Bear Type</th>
+              <th scope="col" >Coat</th>
+              <th scope="col">Adult size</th>
+              <th scope="col">Habitat</th>
+              <th scope="col">Lifespan</th>
+              <th scope="col">Diet</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
-              <td>Wild</td>
-              <td>Brown or black</td>
-              <td>1.4 to 2.8 meters</td>
-              <td>Woods and forests</td>
-              <td>25 to 28 years</td>
-              <td>Fish, meat, plants</td>
+              <th scope="row">Wild</th>
+              <td >Brown or black</td>
+              <td >1.4 to 2.8 meters</td>
+              <td > Woods and forests</td>
+              <td >25 to 28 years</td>
+              <td >Fish, meat, plants</td>
             </tr>
             <tr>
-              <td>Urban</td>
-              <td>North Face</td>
-              <td>18 to 22</td>
-              <td>Condos and coffee shops</td>
-              <td>20 to 32 years</td>
-              <td>Starbucks, sushi</td>
+              <th scope="row">Urban</th>
+              <td >North Face</td>
+              <td >18 to 22</td>
+              <td >Condos and coffee shops</td>
+              <td >20 to 32 years</td>
+              <td >Starbucks, sushi</td>
             </tr>
           </tbody>
         </table>
@@ -91,11 +93,11 @@
         <p>
         Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.
         </p>
-        <img src="media/wild-bear.jpg" alt="wild bear image">
+        <img src="media/wild-bear.jpg" alt="image of wild bear standing in a river in a forest area">
         
         <p>Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.</p>
         
-        <img src="media/urban-bear.jpg" alt="urban bear image">
+        <img src="media/urban-bear.jpg" alt="image of an urban bear lifting its paw standing by a gate in the city">
         
         <p>Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets in McDonalds, to their own apartment.</p>
         
@@ -108,20 +110,29 @@
         <audio controls>
           <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
-          <p>It looks like your browser doesn't support HTML5 audio players.</p>
+          <p> 
+            It looks like your browser doesn't support HTML5 audio players. 
+          <a href = "media/bear.mp3"> Click here to download the audio file. </a>
+          </p>
+          <section>
+            <p> This is a transcript of the audio recording:</p>
+            <p> This isn't really an audio fact file about bears, but it is an audio file you can transcribe.</p>
+          </section>
         </audio>
+
+        
 
         <aside>
 
-          <h3">About the author</h3>
+          <h3>About the author</h3>
         
           <p>Evan Wild is an unemployed plumber from Doncaster, who has been really "in to" wildlife since childhood. He once went to Chester Zoo on holiday, but got ill after eating a doner kebab.</p>
         
-          He has never seen a bear, but once read a Daily Mail article about them, and thinks they sound cool.
+          <p>He has never seen a bear, but once read a Daily Mail article about them, and thinks they sound cool.</p>
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button class="show-hide">Show comments</button>
 
           <div class="comment-wrapper">
 
@@ -129,11 +140,11 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
+               <label for="name"> Your name:</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
